@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>FLOR AMARILLA :)</title>
+    <title>DIA DEL NOVIO :)</title>
     
     <style>
       * {
@@ -76,7 +76,7 @@
         🔒<br />
         Ingrese la contraseña
       </h2>
-      <div class="input-display" id="inputDisplay">••••</div>
+      <div class="input-display" id="inputDisplay">••••••</div>
       <div class="keypad">
         <button class="key" onclick="enterDigit('1')">1</button>
         <button class="key" onclick="enterDigit('2')">2</button>
@@ -92,21 +92,21 @@
     </div>
 
     <script>
-      const correctPassword = "0101";
+      const correctPassword = "280517";
       const display = document.getElementById("inputDisplay");
       let input = "";
       function enterDigit(digit) {
-        if (input.length < 4) {
+        if (input.length < 6) {
           input += digit;
         }
-        display.textContent = input.padEnd(4, "•");
-        if (input.length === 4) {
+        display.textContent = input.padEnd(6, "•");
+        if (input.length === 6) {
           if (input === correctPassword) {
             window.location.href = "flower.html"; 
           } else {
             alert("Contraseña incorecta, intenta de nuevo");
             input = "";
-            display.textContent = "••••";
+            display.textContent = "••••••";
           }
         }
       }
